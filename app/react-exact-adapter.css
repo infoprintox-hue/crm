@@ -1,0 +1,98 @@
+/* React-only structural adapter for the original final 6 class system. */
+body.v68-ui .page-stack { display: block; animation: none; }
+body.v68-ui .app-shell { min-height: 100vh; background: transparent; color: inherit; }
+body.v68-ui .button { min-height: 40px; }
+body.v68-ui .button-primary { color: #fff; border-color: var(--v68-ink); background: var(--v68-ink); }
+body.v68-ui .button-danger { color: var(--v68-danger); background: var(--v68-danger-soft); }
+body.v68-ui .empty-state { min-height: 130px; grid-column: 1 / -1; border: 1px dashed var(--v68-line-strong); border-radius: 16px; color: var(--v68-muted); background: rgba(255,255,255,.35); }
+body.v68-ui .modal-backdrop.back { display: flex; }
+body.v68-ui .modal-backdrop .modal { display: block; }
+body.v68-ui .modal-header.modalhead,
+body.v68-ui .modal-footer.modalfoot { padding: 0; }
+body.v68-ui .modal-header.modalhead { margin-bottom: 19px; border: 0; }
+body.v68-ui .modal-body { overflow: visible; padding: 0; }
+body.v68-ui .modal-footer.modalfoot { margin-top: 20px; border: 0; background: transparent; }
+body.v68-ui .form-grid.form { display: grid; }
+body.v68-ui .field.field-wide { grid-column: 1 / -1; }
+body.v68-ui .field > label,
+body.v68-ui .field > span { font-size: 10px; font-weight: 720; color: #606065; }
+body.v68-ui .search-box.search { max-width: none; padding: 0; border: 0; background: transparent; }
+body.v68-ui .search-box.search > span { display: none; }
+body.v68-ui .search-box.search input { min-height: 44px; }
+body.v68-ui .avatar { overflow: hidden; }
+body.v68-ui .avatar img { width: 100%; height: 100%; object-fit: cover; }
+body.v68-ui .vlos-page-root { min-width: 0; }
+body.v68-ui .vlos-card-action-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+body.v68-ui .vlos-card-action-row .btn { flex: 1; }
+body.v68-ui .vl-react-toast { opacity: 1; transform: none; }
+body.v68-ui .vl-sync-state { display: inline-flex; align-items: center; gap: 7px; color: var(--v68-muted); font-size: 10px; }
+body.v68-ui .vl-sync-state i { width: 7px; height: 7px; border-radius: 50%; background: var(--v68-mint); }
+body.v68-ui .vl-sync-state.saving i { background: #e3a545; animation: pulse 1s infinite; }
+body.v68-ui .vlos-react-mobile-nav { display: none; }
+
+/* Compact pinned-client treatment: keep the priority beside the client name. */
+body.v68-ui #sales .vl-pin-inline {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  max-width: min(230px, 45vw) !important;
+  min-height: 27px !important;
+  padding: 4px 10px !important;
+  border-radius: 9px !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, #ff3b30, #d70015) !important;
+  box-shadow: 0 3px 10px rgba(215, 0, 21, .22) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+}
+body.v68-ui #sales .vl-pin-inline > span { font-size: 13px !important; line-height: 1 !important; }
+body.v68-ui #sales .vl-pin-inline > strong {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  letter-spacing: 0 !important;
+  white-space: nowrap !important;
+}
+body.v68-ui #sales .vl-pinned-head {
+  padding: 7px 4px 9px !important;
+  color: #b42318 !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid rgba(215, 0, 21, .16) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+body.v68-ui #sales .vl-pinned-head strong::before { content: "📌 "; }
+body.v68-ui #sales .vl-pinned-head b {
+  padding: 4px 8px !important;
+  color: #b42318 !important;
+  border-radius: 999px !important;
+  background: #fff0ef !important;
+  opacity: 1 !important;
+}
+body.v68-ui #sales .v76-card.is-pinned {
+  border-color: rgba(255, 59, 48, .22) !important;
+  background: #fff !important;
+}
+body.v68-ui #sales .v76-line1 { row-gap: 6px !important; }
+body.v68-ui #sales .v69-name-wa-line { flex-wrap: wrap !important; }
+body.v68-ui #sales .v69-name-wa-line .vl-pin-inline { max-width: 180px !important; }
+body.v68-ui #sales .v69-name-wa-line .v22-whatsapp { margin-left: auto !important; }
+body.v68-ui[data-theme="dark"] #sales .vl-pinned-head { color: #ff6961 !important; border-bottom-color: rgba(255, 105, 97, .22) !important; }
+body.v68-ui[data-theme="dark"] #sales .vl-pinned-head b { color: #ff8a83 !important; background: rgba(255, 59, 48, .15) !important; }
+body.v68-ui[data-theme="dark"] #sales .v76-card.is-pinned { background: #1c1c1e !important; }
+
+@media (max-width: 860px) {
+  body.v68-ui .topin.pixelappbarin { height: 64px !important; min-height: 64px !important; padding: 0 14px !important; }
+  body.v68-ui .brand.pixelbrand { flex-basis: auto !important; min-width: 0 !important; }
+  body.v68-ui .nav.pixelnav.apple-top-slider { position: fixed !important; z-index: 90 !important; left: 10px !important; right: 10px !important; bottom: max(10px, env(safe-area-inset-bottom)) !important; top: auto !important; justify-content: flex-start !important; overflow-x: auto !important; padding: 6px !important; box-shadow: 0 18px 48px rgba(0,0,0,.17) !important; }
+  body.v68-ui .nav.pixelnav.apple-top-slider button { min-width: 72px !important; flex: 1 0 auto !important; padding: 0 10px !important; }
+  body.v68-ui .nav.pixelnav.apple-top-slider button .vl-nav-ico { display: block !important; }
+  body.v68-ui .pixelactions { min-width: 0 !important; }
+  body.v68-ui .vl-sync-state { display: none; }
+}
