@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Visitinglink Invoice Reference Preview</title>
+  <style>
+    @page { size: A4 portrait; margin: 12mm 10mm 22mm; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; color: #232126; font: 11px/1.48 Arial, sans-serif; }
+    .document-content { padding-bottom: 18mm; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 7mm; break-inside: avoid; }
+    h1 { margin: 0 0 5mm; color: #6437c8; font-size: 25px; font-weight: 400; }
+    .logo { width: 43mm; max-height: 17mm; margin-top: 7mm; object-fit: contain; object-position: right; }
+    .meta { display: grid; grid-template-columns: auto auto; gap: 2.5mm 7mm; font-weight: 700; }
+    .meta span { color: #7b797d; }
+    .parties { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm; margin-bottom: 4.5mm; break-inside: avoid; }
+    .party { min-height: 34mm; padding: 4mm; background: #f0ebf8; border-radius: 1.8mm; }
+    .party label { display: block; margin-bottom: 2mm; color: #6437c8; font-size: 16px; }
+    .party strong { display: block; margin-bottom: .8mm; }
+    .party p { margin: .35mm 0; }
+    table { width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed; }
+    thead { display: table-header-group; }
+    th { padding: 2.3mm 3mm; color: white; background: #6537c8; text-align: right; }
+    th:first-child { text-align: left; border-radius: 1.7mm 0 0; }
+    th:last-child { border-radius: 0 1.7mm 0 0; }
+    td { padding: 2.2mm 3mm; vertical-align: top; background: #f0ebf8; }
+    .item { width: auto; }
+    .qty { width: 25mm; } .rate { width: 28mm; } .amount { width: 31mm; }
+    .item-heading { display: grid; grid-template-columns: 9mm 1fr; gap: 1mm; }
+    .details { margin: 0; padding: 3mm 4mm 3mm 12mm; background: #f0ebf8; line-height: 1.55; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .details h3 { margin: 2.2mm 0 .7mm; font-size: 11px; }
+    .details p { margin: 0 0 1.6mm; }
+    .details ul { margin: 1mm 0 2mm; padding-left: 6mm; }
+    .details li { margin-bottom: .7mm; }
+    .num { text-align: right; white-space: nowrap; }
+    .settlement { display: grid; grid-template-columns: 1.25fr .8fr; gap: 8mm; margin-top: 3mm; break-inside: avoid; }
+    .bank { min-height: 38mm; padding: 3.5mm 5mm; background: #f0ebf8; border-radius: 1.8mm; }
+    .bank h3 { margin: 0 0 1.5mm; color: #6437c8; font-size: 14px; font-weight: 400; }
+    .bank dl { display: grid; grid-template-columns: 1fr 1.15fr; gap: 1.2mm 4mm; margin: 0; }
+    .bank dt { font-weight: 700; } .bank dd { margin: 0; }
+    .totals td { background: white; padding: 2.2mm 0; }
+    .totals td:last-child { text-align: right; }
+    .totals .grand td { border-top: 1px solid; border-bottom: 1px solid; font-size: 16px; font-weight: 800; }
+    .words { margin-top: 3mm; color: #5d5862; font-size: 9px; }
+    .terms { margin-top: 4mm; padding: 3.5mm 5mm; background: #f8f5fc; border-radius: 1.8mm; }
+    .terms h3 { margin: 0 0 1.5mm; color: #6437c8; font-size: 13px; font-weight: 400; }
+    .footer { position: fixed; left: 0; right: 0; bottom: 0; height: 16mm; padding-top: 2.5mm; border-top: 1px dashed #8995a7; background: white; }
+    .footrow { display: grid; grid-template-columns: 1fr 1.25fr 2.8fr; gap: 5mm; align-items: end; }
+    .footrow span { color: #74727a; font-size: 7.5px; }
+    .footrow b { display: block; margin-top: .7mm; font-size: 8.5px; }
+    .page { display: none; }
+    .electron { margin-top: 1.5mm; text-align: center; font-size: 6.8px; }
+  </style>
+</head>
+<body>
+  <main class="document-content">
+  <header class="head"><div><h1>Invoice</h1><div class="meta"><span>Invoice No</span><b>INV1008</b><span>Invoice Date</span><b>19 Sept 2026</b></div></div><img class="logo" src="../public/assets/visitinglink-logo-invoice.png" alt="Visitinglink"></header>
+  <div class="parties"><div class="party"><label>Billed By</label><strong>Hilo technologies</strong><p>Uttar Pradesh, India</p><p><b>GSTIN:</b> 09DLSPS3451M1Z5</p><p><b>PAN:</b> DLSPS3451M</p></div><div class="party"><label>Billed To</label><strong>SURAJ METAL INDUSTRIES</strong><p>Jhansi, Uttar Pradesh, India</p></div></div>
+  <table><colgroup><col><col class="qty"><col class="rate"><col class="amount"></colgroup><thead><tr><th>Item</th><th>Quantity</th><th>Rate</th><th>Amount</th></tr></thead><tbody><tr><td class="item"><div class="item-heading"><b>1.</b><span>Website Design + Profile Combo</span></div></td><td class="num">1</td><td class="num">₹20,300.00</td><td class="num">₹20,300.00</td></tr></tbody></table><section class="details"><h3>PROJECT OVERVIEW</h3><p>A professional and responsive business website for <b>SURAJ METAL INDUSTRIES</b>, designed to present the company, its offerings and business information in a clear and professional manner.</p><h3>WEBSITE SCOPE</h3><ul>
+    <li>Professional responsive website design and development</li><li>Company, business and product/service information</li><li>Enquiry and contact form</li><li>WhatsApp and click-to-call integration</li><li>Email integration</li><li>Google Analytics integration</li><li>Basic serverless backend integration for visitor data</li><li>Mobile, tablet and desktop responsive layout</li><li>Basic SEO-friendly structure</li><li>Company profile content and graphic presentation</li><li>Premium landing and service pages</li><li>Contact, map and social profile integration</li><li>Admin-managed lead status and follow-up workflow</li><li>Accessible typography and mobile navigation</li><li>Browser testing on current Chrome, Safari and Edge</li><li>Image and asset performance optimisation</li><li>SSL-ready deployment configuration</li><li>Two rounds of design revisions</li><li>Deployment and usage walkthrough</li><li>Server and hosting configuration</li><li>Quality assurance and launch checks</li>
+  </ul><h3>DELIVERABLE</h3><p>A complete professional website with integrated communication and analytics features, along with the agreed company profile presentation.</p><h3>COMPLIMENTARY BRANDING</h3><p>Basic Company Profile, Logo Design and Professional Letterhead Design.</p></section>
+  <div class="settlement"><section class="bank"><h3>Bank Details</h3><dl><dt>Account Name</dt><dd>HILO TECHNOLOGIES</dd><dt>Account Number</dt><dd>50200089109692</dd><dt>IFSC</dt><dd>HDFC0000453</dd><dt>Bank</dt><dd>HDFC</dd></dl></section><div><table class="totals"><tr><td>Amount</td><td>₹20,300.00</td></tr><tr><td>CGST + SGST</td><td>₹3,654.00</td></tr><tr class="grand"><td>Total (INR)</td><td>₹23,954.00</td></tr></table><div class="words">TWENTY THREE THOUSAND NINE HUNDRED FIFTY FOUR RUPEES ONLY</div></div></div>
+  <section class="terms"><h3>Terms and Conditions</h3><div>01&nbsp;&nbsp; No refund after any payment has been processed.</div><div>02&nbsp;&nbsp; Please quote the invoice number when remitting funds.</div><div>03&nbsp;&nbsp; Payment is due within 15 days from the invoice date.</div></section>
+  </main>
+  <footer class="footer"><div class="footrow"><div><span>Invoice No</span><b>INV1008</b></div><div><span>Invoice Date</span><b>19 Sept 2026</b></div><div><span>Billed To</span><b>SURAJ METAL INDUSTRIES</b></div><div class="page"></div></div><div class="electron">This is an electronically generated document, no signature is required.</div></footer>
+</body>
+</html>
